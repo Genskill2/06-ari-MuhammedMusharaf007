@@ -13,11 +13,11 @@ string ari(string s)
 		{
 			characters++;
 		}
-		else if (s[i] == " ")
+		else if (s[i] == ' ')
 		{
 			words++;
 		}
-		else if (s[i] == "." || s[i] == "?" || s[i] == "!")
+		else if (s[i] == '.' || s[i] == '?' || s[i] == '!')
 		{
 			sentences++;
 		}
