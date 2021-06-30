@@ -2,7 +2,7 @@
 #include<math.h>
 #include<string.h>
 
-char* ari(char* s)
+const char* ari(char s[])
 {
 	int characters=0, words=0, sentences=0;
 	for(int i=0;i<strlen(s);i++)
@@ -29,10 +29,11 @@ char* ari(char* s)
 	{
 		answer= round(answer);
 	}
-	return final(answer);
+	char* real = final(answer); 
+	return real;
 }
 
-char* final(int answer)
+const char* final(int answer)
 {
 	switch (answer)
 	{
