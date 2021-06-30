@@ -1,14 +1,15 @@
 #include<stdio.h>
+#include<math.h>
 #include<string.h>
 
-char* ari(char *s)
+char* ari(char* s)
 {
-	int character=0, words=0, sentences=0;
+	int characters=0, words=0, sentences=0;
 	for(int i=0;i<strlen(s);i++)
 	{
-		if isalnum(s[i])
+		if (isalnum(s[i]))
 		{
-			character++;
+			characters++;
 		}
 		else if (s[i] == " ")
 		{
@@ -20,7 +21,7 @@ char* ari(char *s)
 		}
 	}
 	int answer = (4.71 * characters/words)+(0.5*words/sentences)-21.43;
-	if (round(answer)-answer)<0
+	if ((round(answer)-answer)<0)
 	{
 		answer= round(answer+1);
 	}
