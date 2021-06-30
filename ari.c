@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<string.h>
 
-string ari(string s)
+char* ari(char *s)
 {
 	int character=0, words=0, sentences=0;
 	for(int i=0;i<strlen(s);i++)
@@ -31,7 +31,7 @@ string ari(string s)
 	return final(answer);
 }
 
-string final(int answer)
+char* final(int answer)
 {
 	switch (answer)
 	{
