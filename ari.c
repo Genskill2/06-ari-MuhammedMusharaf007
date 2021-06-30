@@ -2,7 +2,7 @@
 #include<math.h>
 #include<string.h>
 
-const char* ari(char s[])
+const char* ari(char s)
 {
 	int characters=0, words=0, sentences=0;
 	for(int i=0;i<strlen(s);i++)
