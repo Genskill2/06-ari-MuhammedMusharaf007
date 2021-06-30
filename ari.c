@@ -1,8 +1,10 @@
 #include<stdio.h>
 #include<math.h>
 #include<string.h>
+#include<cs50.h>
+#include<ctype.h>
 
-const char* ari(char s)
+string ari(string s)
 {
 	int characters=0, words=0, sentences=0;
 	for(int i=0;i<strlen(s);i++)
@@ -19,23 +21,15 @@ const char* ari(char s)
 		{
 			sentences++;
 		}
+		else
+		{
+			continue;
+		}
 	}
-	int answer = (4.71 * characters/words)+(0.5*words/sentences)-21.43;
-	if ((round(answer)-answer)<0)
-	{
-		answer= round(answer+1);
-	}
-	else
-	{
-		answer= round(answer);
-	}
-	char* real = final(answer); 
-	return real;
-}
-
-const char* final(int answer)
-{
-	switch (answer)
+	float answer = (4.71 * characters/words)+(0.5*words/sentences)-21.43;
+	int real = ceil(answer);
+	
+	switch (real)
 	{
 	case 1:
 		return "Kindergarten";
@@ -66,5 +60,4 @@ const char* final(int answer)
 	case 14:
 		return "Professor";
 	}
-	return 0;
 } 
